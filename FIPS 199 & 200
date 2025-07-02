@@ -1,4 +1,4 @@
-Raw Conversation
+Raw Notes
 
 FIPS 199 & 200 is essential for appying the NIST RMF effectively. 
 
@@ -46,5 +46,16 @@ Think of it as the security control shopping list for every federal system, tell
 | 16 | SC           | System and Communications Protection  | Ensures secure transmission of data and protection of system functions.                                    |
 | 17 | SI           | System and Information Integrity      | Detects, reports, and corrects errors in information systems.                                              |
 |----|--------------|---------------------------------------|------------------------------------------------------------------------------------------------------------|
+
+
+
+Sample FIPS 199 Table for easy learning
+
+| Objective       | Question                                               | Example Answer             |
+| --------------- | ------------------------------------------------------ | -------------------------- |
+| Confidentiality | Would a data leak harm the org or users?               | Moderate: vendor contracts |
+| Integrity       | Would incorrect data hurt operations or safety?        | High: manufacturing flaws  |
+| Availability    | Would downtime hurt missions or revenue significantly? | High: global production    |
+
 
 
