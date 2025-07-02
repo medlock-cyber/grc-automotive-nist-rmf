@@ -1,0 +1,15 @@
+Raw Notes
+
+The Big Picture of SP 800-53
+
+This Special Publication is the authoritatative catalog for security and privacy controls for US Federal Systems. The question that needs to be answered is "What specific protections does this system need and how should I apply them?"
+
+| Component                | What It Does                                                                      |
+| ------------------------ | --------------------------------------------------------------------------------- |
+| **Control ID**           | e.g., `AC-2` (Access Control 2: Account Management)                               |
+| **Control Name**         | Short description of what it governs                                              |
+| **Control Statement**    | A clear, mandatory requirement (e.g., "The organization manages system accounts") |
+| **Control Enhancements** | Optional add-ons for higher assurance (e.g., automate account removals)           |
+| **Discussion**           | NIST's explanation of what the control means                                      |
+| **References**           | Links to related controls and guidance                                            |
+| ------------------------ | ----------------------------------------------------------------------------------|
