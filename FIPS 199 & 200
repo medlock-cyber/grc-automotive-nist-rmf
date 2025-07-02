@@ -1,0 +1,50 @@
+Raw Conversation
+
+FIPS 199 & 200 is essential for appying the NIST RMF effectively. 
+
+FIPS 199 helps you determine the impact level for the three security objectives (CIA Triad).
+
+*Remember this*
+
+Confidientiality = prevting unauthorized disclosure of information
+Integrity = preventing unauthorized modification or destruction
+Availability = ensuring timely and reliable access to information
+
+Essentially, you are answering the question, "if this system's data was leaked, changed, or taken offline, how bad would it be for the organization?"
+
+The Impact levels of FIPS 199 are pretty straight forward; Low, Moderate, & High.
+
+Low = Minor inconvenience or limited effect
+Moderate = Serious damage to operationg, finances or reputation
+High = Severe/Catastrophic harm to mission, finance or national security
+
+FIPS 200 tells you what general control areas you must address in your system based on its categories from FIPS 199.
+
+Think of it as the security control shopping list for every federal system, telling you the 17 control familiies needed to implement from NIST SP 800-53
+
+
+
+*The 17 Control Families*
+
+| #  | Abbreviation | Control Family Name                   | Description                                                                                                |          
+|----|--------------|---------------------------------------|------------------------------------------------------------------------------------------------------------|
+| 1  | AC           | Access Control                        | Policies and controls to limit system access to authorized users and processes.                            |
+| 2  | AT           | Awareness and Training                | Security awareness and role-based training to ensure personnel understand security responsibilities.       |
+| 3  | AU           | Audit and Accountability              | Mechanisms to record, examine, and review system activity to detect and investigate inappropriate actions. |
+| 4  | CA           | Security Assessment and Authorization | Ensures security controls are assessed for effectiveness and systems are authorized before operation.      |
+| 5  | CM           | Configuration Management              | Maintaining secure configurations and managing changes systematically.                                     |
+| 6  | CP           | Contingency Planning                  | Establishing and testing recovery strategies for disruptions or data loss.                                 |
+| 7  | IA           | Identification and Authentication     | Ensures proper user identification and authentication before granting access.                              |
+| 8  | IR           | Incident Response                     | Policies and procedures to detect, report, and respond to cybersecurity incidents.                         |
+| 9  | MA           | Maintenance                           | Secure performance and documentation of system maintenance activities.                                     |
+| 10 | MP           | Media Protection                      | Protection of system media (digital and physical) and secure handling of sensitive information.            |
+| 11 | PE           | Physical and Environmental Protection | Prevent unauthorized physical access and protect equipment from environmental hazards.                     |
+| 12 | PL           | Planning                              | Development and maintenance of security plans aligned with mission and risk.                               |
+| 13 | PS           | Personnel Security                    | Measures to ensure individuals are screened and maintain trustworthy behavior.                             |
+| 14 | RA           | Risk Assessment                       |  Identifying and analyzing risks to organizational operations and systems.                                 |
+| 15 | SA           | System and Services Acquisition       | Integrating security requirements into procurement and development processes.                              |
+| 16 | SC           | System and Communications Protection  | Ensures secure transmission of data and protection of system functions.                                    |
+| 17 | SI           | System and Information Integrity      | Detects, reports, and corrects errors in information systems.                                              |
+|----|--------------|---------------------------------------|------------------------------------------------------------------------------------------------------------|
+
+
