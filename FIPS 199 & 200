@@ -1,6 +1,8 @@
 Raw Notes
 
-FIPS 199 & 200 is essential for appying the NIST RMF effectively. 
+FEDERAL INFORMATION PROCESSING STANDARDS
+
+FIPS 199 & 200 is essential for appying the NIST RMF effectively. FIPS 199 is the Security Categorizarion and FIPS 200 is the minimum security requirements. 
 
 FIPS 199 helps you determine the impact level for the three security objectives (CIA Triad).
 
