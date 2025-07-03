@@ -2,7 +2,8 @@ Raw Notes
 
 The Big Picture of SP 800-53
 
-This Special Publication is the authoritatative catalog for security and privacy controls for US Federal Systems. The question that needs to be answered is "What specific protections does this system need and how should I apply them?"
+This Special Publication is the authoritatative catalog for security and privacy controls for US Federal Systems. 
+[]\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ The question that needs to be answered is "What specific protections does this system need and how should I apply them?"
 
 | Component                | What It Does                                                                      |
 | ------------------------ | --------------------------------------------------------------------------------- |
@@ -28,7 +29,7 @@ there are 17 control families
 you must apply controls from all of them
 the depth of the controls depends on your FIPS 199 rating (Low/Mod/High)
 
-For FIPS, When it says that you must apply all controls from all control families, thsi means that you are respsonsible for reviewing and addressing every relevant control within each of the 20 SP 800-53 control families based on the systems impact level.
+For FIPS, When it says that you must apply all controls from all control families, this means that you are respsonsible for reviewing and addressing every relevant control within each of the 20 SP 800-53 control families based on the systems impact level.
 
 You are not required to implement every single conrol in the catalog blindly. There 1000+ controls
 
