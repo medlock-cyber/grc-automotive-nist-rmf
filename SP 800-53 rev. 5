@@ -13,3 +13,61 @@ This Special Publication is the authoritatative catalog for security and privacy
 | **Discussion**           | NIST's explanation of what the control means                                      |
 | **References**           | Links to related controls and guidance                                            |
 | ------------------------ | ----------------------------------------------------------------------------------|
+
+*Remember this*
+
+This ties into FIPS 199 by the way you categorized your system based on how bad it would be if:
+Its data was stolen (Confidentiality)
+its data was changed (Integrity)
+It went offline (Availability)
+
+This would essentially result in a High Impact system.
+
+This ties into the FIPS 200 because I learned that 
+there are 17 control families
+you must apply controls from all of them
+the depth of the controls depends on your FIPS 199 rating (Low/Mod/High)
+
+For FIPS, When it says that you must apply all controls from all control families, thsi means that you are respsonsible for reviewing and addressing every relevant control within each of the 20 SP 800-53 control families based on the systems impact level.
+
+You are not required to implement every single conrol in the catalog blindly. There 1000+ controls
+
+Apply this baseline instead 
+Low-Impact System → apply ~150 core controls
+
+Moderate-Impact System → ~260 controls
+
+High-Impact System → ~320+ controls
+These are the required controls across the families.
+
+Then you:
+
+Tailor controls (add/remove/justify)
+
+Implement what applies to your environment
+
+Document how you meet or mitigate each one
+
+THE 20 CONTROL FAMILIES (Rev. 5)
+| Family                                       | Description                                      |
+| -------------------------------------------- | ------------------------------------------------ |
+| **AC** - Access Control                      | Who can access what, and how                     |
+| **AU** - Audit & Accountability              | Logging, monitoring, tracking                    |
+| **CM** - Configuration Management            | System settings and change control               |
+| **IA** - Identification & Authentication     | Passwords, MFA, identity verification            |
+| **IR** - Incident Response                   | Detect, report, and recover from incidents       |
+| **MP** - Media Protection                    | Secure handling of USBs, disks, backups          |
+| **PE** - Physical & Environmental Protection | Secure rooms, cameras, door locks                |
+| **PL** - Planning                            | Security planning, rules of behavior             |
+| **PS** - Personnel Security                  | Screening, training, termination procedures      |
+| **RA** - Risk Assessment                     | Identify and prioritize threats                  |
+| **SA** - System and Services Acquisition     | Secure coding, vendor risk                       |
+| **SC** - System & Communications Protection  | Encryption, network defense                      |
+| **SI** - System & Info Integrity             | Patch management, antivirus                      |
+| **CA** - Security Assessment & Authorization | Audits, ATO process                              |
+| **AT** - Awareness & Training                | User training, phishing prevention               |
+| **CP** - Contingency Planning                | Disaster recovery, backups                       |
+| **MA** - Maintenance                         | Who maintains systems and how                    |
+| **PM** - Program Management                  | Org-level risk governance                        |
+| **SR** - Supply Chain Risk Management        | Vendor security                                  |
+| **PT** - Privacy                             | Privacy rights, PII protection (added in Rev. 5) |
