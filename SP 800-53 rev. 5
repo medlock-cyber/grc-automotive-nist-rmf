@@ -29,7 +29,9 @@ there are 17 control families
 you must apply controls from all of them
 the depth of the controls depends on your FIPS 199 rating (Low/Mod/High)
 
-For FIPS, When it says that you must apply all controls from all control families, this means that you are respsonsible for reviewing and addressing every relevant control within each of the 20 SP 800-53 control families based on the systems impact level.
+For FIPS, When it says that you must apply all controls from all control families, 
+this means that you are respsonsible for reviewing and addressing every relevant control within each of 
+the 20 SP 800-53 control families based on the systems impact level.
 
 You are not required to implement every single conrol in the catalog blindly. There 1000+ controls
 
@@ -72,3 +74,42 @@ THE 20 CONTROL FAMILIES (Rev. 5)
 | **PM** - Program Management                  | Org-level risk governance                        |
 | **SR** - Supply Chain Risk Management        | Vendor security                                  |
 | **PT** - Privacy                             | Privacy rights, PII protection (added in Rev. 5) |
+| -------------------------------------------- | ------------------------------------------------ |
+
+
+Here is the Mock SP 800-53 Baseline that I have come up with.
+| Control ID | Control Name                    | Family                          | Purpose                                        | High Baseline |
+| ---------- | ------------------------------- | ------------------------------- | ---------------------------------------------- | ------------- |
+| **AC-2**   | Account Management              | Access Control                  | Control user account lifecycle                 | ✅             |
+| **AU-6**   | Audit Review & Analysis         | Audit & Accountability          | Detect suspicious activity                     | ✅             |
+| **AT-2**   | Security Awareness Training     | Awareness & Training            | Train employees on cyber hygiene               | ✅             |
+| **CA-2**   | Security Assessments            | Assessment & Authorization      | Plan regular security assessments              | ✅             |
+| **CM-2**   | Baseline Configuration          | Config Management               | Establish system configuration standards       | ✅             |
+| **CP-9**   | Information System Backup       | Contingency Planning            | Backup ERP data regularly                      | ✅             |
+| **IA-2**   | User Identification & Auth      | Identification & Authentication | Ensure all users are authenticated             | ✅             |
+| **IR-4**   | Incident Handling               | Incident Response               | Manage security incidents effectively          | ✅             |
+| **MA-4**   | Remote Maintenance              | Maintenance                     | Secure remote system maintenance               | ✅             |
+| **MP-5**   | Media Transport Protection      | Media Protection                | Protect data when physical media is moved      | ✅             |
+| **PE-3**   | Physical Access Control         | Physical & Environmental        | Secure ERP hosting location physically         | ✅             |
+| **PL-2**   | System Security Plan            | Planning                        | Document how controls are implemented          | ✅             |
+| **PS-3**   | Personnel Screening             | Personnel Security              | Background checks for ERP admins               | ✅             |
+| **RA-3**   | Risk Assessment                 | Risk Assessment                 | Identify and document risks to ERP             | ✅             |
+| **SA-9**   | External Information Systems    | System Acquisition              | Secure integrations with vendors               | ✅             |
+| **SC-12**  | Cryptographic Key Establishment | Sys & Comm Protection           | Protect data in transit and at rest            | ✅             |
+| **SI-2**   | Flaw Remediation                | System Integrity                | Patch vulnerabilities promptly                 | ✅             |
+| **SR-5**   | Supply Chain Risk               | Supply Chain Risk Mgmt          | Vet suppliers for cyber risks                  | ✅             |
+| **PM-12**  | Insider Threat Program          | Program Mgmt                    | Detect and prevent insider threats             | ✅             |
+| **PT-2**   | Privacy Impact Assessment       | Privacy                         | Evaluate risks to PII (employee/supplier data) | ✅             |
+
+The System is a Global Automative Manufacturing ERP with a HIGH impact level. The numbers after the controls *AC-2(3)* are enhancements
+that help tailor the level of protection based on the impact of the system (From FIPS 199). Think of them as security hardening optiosn built
+on the main control.
+
+*Example*
+- AC-2 = The System must manage user accounts, including creation, changes, and termination. This means that in the system above:
+accounts are provisioned via Active Directory Integration
+deactivation is triggeres automaticall after 30 days of inactivity
+privelged access requires ISO approval (which prevents unatorized access and orphan accounts).
+
+
+
