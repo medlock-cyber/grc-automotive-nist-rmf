@@ -1,1 +1,23 @@
 Implementing Security Controls
+
+Describe how to apply and enforce each selected cotrol in the system.
+
+Take the selected SP 800-53 controls and write how each control is implemented, whos responsible, which systems or tools are involved,
+and evidence that shows its in place (Logs, procedurs, screenshots).
+
+This would make the SSP (System Security Plan)
+
+SSP Example
+
+### Control ID: AC-2 – Account Management
+**Control Description:** The organization manages information system accounts, 
+including account creation, modification, disabling, and termination.
+
+**Implementation:**
+- Account requests are submitted through the internal Identity Governance system (SailPoint).
+- All privileged access must be approved by the Information Security Officer (ISO).
+- Inactive accounts are automatically disabled after 30 days using PowerShell scripts and GPO policies.
+- Monthly account audits are conducted by the GRC team.
+
+**Responsible Party:** System Administrator & GRC Analyst  
+**Artifacts:** Access control policy, AD account list, audit logs
