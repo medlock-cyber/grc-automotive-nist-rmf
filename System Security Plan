@@ -21,3 +21,5 @@ including account creation, modification, disabling, and termination.
 
 **Responsible Party:** System Administrator & GRC Analyst  
 **Artifacts:** Access control policy, AD account list, audit logs
+
+This would be consistent for the other 10-20 controls.
