@@ -1,0 +1,163 @@
+The Security Assesment Plan summarizes the results of testing and evaluating the security controls of an information system.
+Are the controls implemented correctly?
+Are they operating as intended?
+Do they meet security requirements?
+
+These are questions that I ask myself when going through this step. The SAR is useful because its evidence based. It proves that your system isn't just "secure on paper". It has been tested
+to highlight gaps, misconfigurations, or non-compliant controls. Doing this helps the authorizing official decide if the system is safe to operate thus improving security posture. 
+
+I would use this during a cybersecurity audit because the SAR shows what needs fixing and what was tested. In GRC roles, its one of the most reviewed artifacts before a system goes live or gets authorized.
+Below is a Mock SAR I created for this project
+____________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# Security Assessment Report (SAR)
+**System**: Global Automotive ERP  
+**Assessment Date**: 07/22/2025  
+**Assessor**: Mark Medlock, GRC Analyst  
+**System Impact Level**: HIGH  
+**Assessment Scope**: 10 High-priority controls selected from SSP
+
+---
+
+## Control: AC-2 – Account Management
+**Assessment Method**: Log Review, Interview, Scripting  
+**Assessment Results**:
+- Confirmed automatic deactivation via PowerShell
+- Found two accounts still active after 45 days (exception list was missing)
+**Status**: Partially Compliant  
+**Risk Level**: Medium  
+**Recommendation**: Update script to include service account exception logic  
+**Artifacts**: `disable_inactive_accounts.ps1`, `AD-logs.csv`, Screenshot: `ac-2-logs.png`
+
+---
+
+## Control: IA-2 – Identification and Authentication
+**Assessment Method**: MFA Configuration Review, Login Attempt  
+**Assessment Results**:
+- Okta MFA enforced for all ERP admins
+- Test login with non-MFA user was denied  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Continue quarterly MFA enforcement review  
+**Artifacts**: Screenshot: `mfa-policy.png`
+
+---
+
+## Control: AU-6 – Audit Review and Analysis
+**Assessment Method**: SIEM Dashboard Review, Log Sample  
+**Assessment Results**:
+- Splunk alert rule triggered for failed logins
+- Weekly review evidence documented  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Add new rule for vendor access anomalies  
+**Artifacts**: `splunk-alerts.pdf`, Screenshot: `audit-review-summary.png`
+
+---
+
+## Control: SI-2 – Flaw Remediation
+**Assessment Method**: Vulnerability Scan Review (Nessus), Patch Logs  
+**Assessment Results**:
+- All critical CVEs patched within 7 days
+- One low-severity finding older than 60 days  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Include low-priority patch reviews in monthly meeting  
+**Artifacts**: `nessus-report-july.pdf`, `patching_log.csv`
+
+---
+
+## Control: SC-12 – Cryptographic Key Establishment
+**Assessment Method**: Azure Key Vault Review, TLS Scan  
+**Assessment Results**:
+- TLS 1.3 enforced on ERP front-end
+- Key rotation policy set to 12 months  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Quarterly crypto config reviews  
+**Artifacts**: `key-policy.docx`, Screenshot: `tls-scan-results.png`
+
+---
+
+## Control: IR-4 – Incident Response
+**Assessment Method**: Playbook Review, Ticket Logs  
+**Assessment Results**:
+- Last two incidents resolved within SLA
+- Playbooks followed with documented lessons learned  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Run IR tabletop exercises twice a year  
+**Artifacts**: `ir-tickets.pdf`, `incident_playbook.docx`
+
+---
+
+## Control: CP-9 – Information System Backup
+**Assessment Method**: Backup Logs, Recovery Test Evidence  
+**Assessment Results**:
+- Nightly backups succeeded 29/30 days
+- Recovery test successful on 07/10/2025  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Investigate the one missed backup (07/02)  
+**Artifacts**: `backup-log.xlsx`, `recovery-test-results.docx`
+
+---
+
+## Control: CM-6 – Configuration Settings
+**Assessment Method**: CIS-CAT Report, GPO Review  
+**Assessment Results**:
+- 94% compliance with Windows baseline
+- One finding related to password age  
+**Status**: Partially Compliant  
+**Risk Level**: Medium  
+**Recommendation**: Update password policy GPO  
+**Artifacts**: `ciscat-report.xml`, Screenshot: `gpo-editor.png`
+
+---
+
+## Control: PL-2 – System Security Plan
+**Assessment Method**: SSP File Review  
+**Assessment Results**:
+- SSP updated and includes all required content
+- Version control and artifact references verified  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Add a changelog section for future updates  
+**Artifacts**: `ssp_v1.0.md`
+
+---
+
+## Control: RA-3 – Risk Assessment
+**Assessment Method**: Risk Register Review, CVSS Matrix  
+**Assessment Results**:
+- Quarterly risk register maintained
+- CVSS scores updated as of 07/15/2025  
+**Status**: Compliant  
+**Risk Level**: Low  
+**Recommendation**: Link risk register to vulnerability tracker  
+**Artifacts**: `risk-register.xlsx`, `cvss-matrix.pdf`
+
+**END**
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Here is a summary of what I just did;
+
+The security assessment report is a key deliverable that documents the results of a formal security control assessment conducted on a simualted high-impact Enterprise Resource Planning (ERP) system.
+This report of a larger RMF-based cybersecurity project that aligns with NIST Special Publication 800-37 and 800-53 (Rev. 5). The SAR focuses on 10 high-priority controls selected form across all 
+NIST control families, including access control, incident response, vulnerability remediation, and backup management. For each control, the SAR includes:
+Assessment Methodology: How the control was tested (e.g., log review, configuration validation, script output, interviews)
+
+Assessment Results: A summary of what was observed during testing
+
+Compliance Status: Whether the control is compliant, partially compliant, or non-compliant
+
+Risk Level: A risk rating (Low, Medium, or High) based on the potential impact of control weaknesses
+
+Recommendations: Actions needed to remediate gaps or strengthen implementation
+
+Supporting Artifacts: Sample scripts, screenshots, logs, or documentation used as evidence
+
+This report demonstrates the assessor's ability to performs technical and procedural verification of security controls and generate risk-informed findings.it is a critical component used to supprt the system's 
+Authorization to Operate (ATO) decision, as it infroms stakeholders of the current security posture and any outstanding vulnerabiities. By producing this SAR, the project calidates both cybersecurity knowledge and 
+the ability to apply GRC processes in a simulated enterprise environment, making it a strong protfolio piece for risk analytics, ISSOs or RMF professionals.  
+
