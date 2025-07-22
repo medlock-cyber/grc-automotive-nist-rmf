@@ -22,4 +22,87 @@ including account creation, modification, disabling, and termination.
 **Responsible Party:** System Administrator & GRC Analyst  
 **Artifacts:** Access control policy, AD account list, audit logs
 
-This would be consistent for the other 10-20 controls.
+This would be consistent for the other 10-20 controls. Below is the Template I would use for the SSP
+_________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# System Security Plan (SSP) – Global Automotive ERP System
+
+## System Overview
+- **System Name**: Global Automotive ERP
+- **System Owner**: Mark Medlock, GRC Analyst
+- **System Description**: This ERP system supports manufacturing operations, HR, finance, and supplier management across North America, Europe, and China.
+- **Impact Level**: HIGH (FIPS 199)
+- **Authorization Boundary**: Includes ERP application, underlying infrastructure, and integrated vendor platforms.
+
+## Roles & Responsibilities
+- **System Owner**: Ensures business alignment and funding
+- **ISO**: Oversees security posture and control effectiveness
+- **GRC Analyst**: Develops RMF documentation and supports assessments
+- **IT Admin**: Implements technical controls and patching
+
+## Control Implementation Descriptions
+
+### AC-2 – Account Management (and AC-2(3))
+**Description**: The organization manages system accounts, including creation, disabling, and auditing of inactive accounts.
+**Implementation**: ERP accounts are provisioned via Azure AD. Inactive accounts are automatically disabled after 30 days using a PowerShell script. Access reviews are conducted monthly.
+**Responsible Party**: IT Admin, GRC Analyst
+**Artifacts**: AD logs, Deactivation script, Review logs
+
+### IA-2 – Identification and Authentication (and IA-2(12))
+**Description**: All users must be uniquely identified and authenticated using MFA.
+**Implementation**: ERP login uses Azure AD with Okta MFA. All privileged accounts require MFA using physical tokens or authenticator apps.
+**Responsible Party**: IT Admin
+**Artifacts**: MFA config, Authentication logs
+
+### AU-6 – Audit Review and Analysis (and AU-6(1))
+**Description**: Audit logs are reviewed for signs of unauthorized activity.
+**Implementation**: Logs are forwarded to Splunk for automated analysis. Alerts are generated for anomalies and reviewed weekly by the SOC.
+**Responsible Party**: SOC Analyst
+**Artifacts**: Splunk rules, Audit logs, Weekly reports
+
+### SI-2 – Flaw Remediation
+**Description**: Vulnerabilities are identified and remediated promptly.
+**Implementation**: Nessus scans are performed weekly. Patches are applied within 7/30/60 days based on severity. Patch status is tracked in ServiceNow.
+**Responsible Party**: IT Admin, GRC Analyst
+**Artifacts**: Scan reports, Patch logs, ServiceNow tickets
+
+### SC-12 – Cryptographic Key Establishment (and SC-12(2))
+**Description**: Keys are generated and exchanged securely using automated tools.
+**Implementation**: TLS 1.3 is enforced for all communications. Keys are generated via Azure Key Vault and rotate annually.
+**Responsible Party**: IT Admin
+**Artifacts**: Key Vault policy, Encryption config
+
+### IR-4 – Incident Response (and IR-4(1))
+**Description**: Security incidents are detected, reported, and handled.
+**Implementation**: Incidents are logged and triaged via Jira. Critical events trigger automated workflows via SOAR integration.
+**Responsible Party**: SOC Team, GRC Analyst
+**Artifacts**: IR playbooks, SOAR rules, Jira reports
+
+### CP-9 – Information System Backup (and CP-9(2))
+**Description**: ERP data is backed up and tested for integrity.
+**Implementation**: Backups are encrypted and occur nightly. Restore tests are done monthly to validate integrity.
+**Responsible Party**: IT Admin
+**Artifacts**: Backup policy, Restore test logs
+
+### CM-6 – Configuration Settings (and CM-6(1))
+**Description**: Systems enforce secure baseline configurations.
+**Implementation**: Hardened images are deployed via SCCM. Compliance is enforced using GPO and CIS CAT.
+**Responsible Party**: IT Admin
+**Artifacts**: Baseline checklist, SCCM logs, GPO reports
+
+### PL-2 – System Security Plan
+**Description**: Maintain and update this SSP.
+**Implementation**: This document is updated quarterly and reviewed during internal assessments.
+**Responsible Party**: GRC Analyst
+**Artifacts**: Version history, Review logs
+
+### RA-3 – Risk Assessment
+**Description**: Identify and evaluate threats and vulnerabilities.
+**Implementation**: The GRC team uses a quarterly risk matrix and CVSS scores to prioritize risks. Results are reviewed with leadership.
+**Responsible Party**: GRC Analyst
+**Artifacts**: Risk register, CVSS scores, Meeting minutes
+
+**END**
+______________________________________________________________________________________________________________________________________________________________________________________________
+
+As you can see, each control has the necesarry description, ways for implementation, which parties are responsibly, and proof (Artifacts) that a control has been implemented and auditable. 
