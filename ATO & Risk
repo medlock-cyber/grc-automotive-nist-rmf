@@ -1,0 +1,92 @@
+📜 Step 5: Authorization Overview
+
+The Authorization phase of the Risk Management Framework (RMF) is the formal process of evaluating a system’s security
+posture and determining whether it is approved to operate. This decision is made by a senior leader known as the Authorizing Official (AO) 
+based on a thorough review of RMF documentation and risk exposure.
+
+🛡️ Purpose of Authorization
+
+Authorization ensures that:
+
+All security controls have been selected, implemented, and tested
+
+Any remaining risks are clearly documented and acknowledged
+
+The system meets organizational and federal security requirements
+
+This step shifts responsibility for the system’s risk from the technical teams to senior leadership, ensuring transparency and accountability.
+
+🔗 How Authorization Ties into the Project
+
+
+Deliverable	                            Role in Authorization
+
+System Security Plan (SSP)	            Describes how security controls are implemented
+Security Assessment Report (SAR)	      Documents the results of control testing and identifies gaps
+Plan of Action and Milestones (POA&M)	  Lists issues and tracks remediation timelines
+Authorization Decision Memo (ATO)	      Official sign-off granting system operation approval
+
+✅ Outcome
+The result of this phase is an Authorization to Operate (ATO) decision, which allows the system to be used in a production environment. 
+This decision may include conditions or timelines for fixing outstanding issues. In this project, an ATO decision is simulated based on the documented controls and assessment results.
+__________________________________________________________________________________________________________________________________________________________________________________________
+
+## Here is a Mock up of the ATO Memo ##
+
+
+# Authorization to Operate (ATO) Decision Memo
+
+**System Name**: Global Automotive ERP  
+**System Owner**: Mark Medlock  
+**Authorizing Official**: (Simulated) Chief Information Security Officer  
+**System Categorization**: High Impact (per FIPS 199)  
+**Authorization Date**: 07/22/2025  
+**Authorization Type**: Initial ATO  
+**ATO Validity Period**: 12 months  
+
+---
+
+## Summary
+
+After reviewing the following Risk Management Framework (RMF) artifacts:
+
+- **System Security Plan (SSP)** – documents security control implementation
+- **Security Assessment Report (SAR)** – summarizes control testing results
+- **Plan of Action and Milestones (POA&M)** – tracks any remediation efforts
+
+I authorize the Global Automotive ERP system to operate in a production environment.
+
+---
+
+## Conditions of Authorization
+
+The following conditions are in place for this authorization:
+
+- Identified **partially compliant controls (AC-2, CM-6)** must be remediated within **90 days**
+- Ongoing **monitoring and risk assessments** must be conducted quarterly
+- Any **significant changes** to the system must trigger a reauthorization review
+
+---
+
+## Residual Risk Acceptance
+
+The residual risks identified in the SAR have been reviewed and accepted. Risk levels are considered manageable based on the following:
+
+- Implementation of strong foundational controls (IA-2, AU-6, IR-4, SI-2)
+- Plans in place to address medium-risk findings
+- Continuous monitoring procedures established
+
+---
+
+**Authorization Decision**: ✅ **Authorized to Operate**
+
+---
+
+**Signature**:  
+*(Simulated)*  
+Chief Information Security Officer  
+Global Automotive Company  
+Date: 07/22/2025
+
+_________________________________________________________________________________________________________________________________________________________________________________________
+
