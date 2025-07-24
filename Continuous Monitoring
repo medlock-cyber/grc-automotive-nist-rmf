@@ -1,0 +1,144 @@
+🧠 Why Continuous Monitoring Is Important
+
+Continuous Monitoring is critical because security is not static — threats, systems, users, and risks 
+are constantly changing. Even after you've built and authorized a secure system,
+vulnerabilities can emerge through:
+
+> New software patches or misconfigurations
+> Insider threats or account misuse
+> Changes in compliance requirements
+> Vendor or third-party updates
+> Evolving threat actor tactics
+
+🔐 ConMon Ensures That:
+
+Benefit	                         What It Means
+✅ Ongoing Compliance	           Proves your system continues to meet NIST or federal security standards
+🧪 Control Effectiveness	       Verifies that controls work as intended over time
+🔍 Risk Detection	               Identifies new vulnerabilities or attack paths quickly
+📉 Risk Reduction	               Enables faster mitigation and lower impact from security events
+📊 Visibility	                   Keeps stakeholders aware of current risk posture and trends
+
+
+ConMon (Continuous Monitoring) starts immediately after step 5 (Authorization). The ATO gives you permission to operate
+and ConMon ensures you're still operating securely. It pulls from what I've already built; Controls from your SSP, Findings from your SAR,
+Risks accepted in your ATO, Fixes tracked in your POA&M. It then monitors those areas using
+Technical tools (SIEM, scanners, logs), Administrative processes (access reviews, policy updates), 
+and Reporting cycles (Monthly/Quarterly reports) 
+
+🧱 First Steps in Continuous Monitoring:
+
+✅ Identify what controls need to be monitored (based on risk)
+🔁 Define how often to review/test each one
+📊 Establish metrics or thresholds (e.g., patch in 7 days, log reviews weekly)
+🛠️ Choose tools (SIEM, vulnerability scanner, GRC platform)
+🧾 Begin logging findings and trends
+_____________________________________________________________________________________________________________________________________________________
+
+##Here is a Mock Continous Monitoring Plan##
+
+🔁 Continuous Monitoring – Overview
+
+**Continuous Monitoring (ConMon)** is the final step in the NIST Risk Management Framework (RMF). 
+It involves the ongoing observation, assessment, and reporting of a system’s security posture to ensure that implemented controls continue to be effective over time.
+
+This step is essential for:
+- Detecting new threats and vulnerabilities
+- Monitoring compliance with security baselines
+- Tracking changes and their impact on security
+- Maintaining visibility into operational risk
+
+ConMon supports decision-makers by providing real-time or near-real-time data that informs risk responses and corrective actions.
+It is a foundational practice for long-term security assurance and system integrity.
+
+---
+
+# 📊 Continuous Monitoring Plan – Global Automotive ERP
+
+**System**: Global Automotive ERP  
+**System Impact Level**: HIGH  
+**Plan Owner**: Mark Medlock, GRC Analyst  
+**Monitoring Period**: Quarterly
+
+---
+
+## 1. Objectives
+
+- Ensure ongoing effectiveness of implemented security controls
+- Identify deviations from the authorized security posture
+- Detect and respond to emerging threats or misconfigurations
+- Maintain compliance with organizational and federal requirements
+
+---
+
+## 2. Monitoring Scope
+
+The following control areas will be continuously monitored:
+
+| Control Family                  | Controls   |
+|---------------------------------|------------|
+| Access Control                  | AC-2, AC-6 |
+| Identification & Authentication | IA-2       |
+| System & Information Integrity  | SI-2, SI-4 |
+| Audit & Accountability          | AU-6       |
+| Configuration Management        | CM-6       |    
+| Contingency Planning            | CP-9       |
+| Incident Response               | IR-4       |
+
+---
+
+## 3. Monitoring Activities
+
+| Activity                     | Frequency | Tools/Methods        |
+|------------------------------|-----------|----------------------|
+| Patch Management Review      | Weekly    | Nessus, SCCM logs    |
+| Audit Log Review             | Weekly    | Splunk Dashboard     |
+| Access Reviews               | Monthly   | Azure AD Reports     |
+| Vulnerability Scanning       | Weekly    | Nessus               |
+| Backup & Recovery Validation | Monthly   | Veeam Test Logs      |
+| Control Drift Detection      | Quarterly | CIS-CAT, GPO Reports |
+| Risk Register Update         | Quarterly | Risk Matrix Review   |
+
+---
+
+## 4. Roles and Responsibilities
+
+| Role        | Responsibility                                      |
+|-------------|-----------------------------------------------------|
+| GRC Analyst | Coordinate monitoring activities, report on posture |
+| IT Admin    | Execute technical checks and patching               |
+| SOC Team    | Analyze SIEM alerts and incident logs               |
+| ISO         | Review findings and authorize changes               |
+
+---
+
+## 5. Reporting and Documentation
+
+All findings and performance data will be summarized in a **Quarterly Security Posture Report**, which includes:
+
+- Control status updates
+- New risk items
+- POA&M updates
+- Metrics and trends
+
+---
+
+## 6. Tools Used
+
+- Microsoft Azure AD
+- Nessus Vulnerability Scanner
+- Splunk SIEM
+- ServiceNow
+- CIS-CAT Pro
+- GPO/Group Policy Reports
+- SCCM/WSUS
+
+---
+
+## 7. Review Cycle
+
+This plan will be reviewed and updated on a quarterly basis or following any major system change or security incident.
+
+__________________________________________________________________________________________________________________________________________________________________________
+
+##END##
